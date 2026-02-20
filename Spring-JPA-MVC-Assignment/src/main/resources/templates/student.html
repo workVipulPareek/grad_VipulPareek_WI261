@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Student Web Page</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+        }
+        input {
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 250px;
+        }
+        button {
+            padding: 6px 12px;
+            margin-right: 10px;
+        }
+        table {
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px 12px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Student Form</h2>
+
+<form th:action="@{/save}" th:object="${student}" method="post">
+
+    <label>Roll No:</label><br>
+    <input type="text" th:field="*{rollNo}" required><br>
+
+    <label>Name:</label><br>
+    <input type="text" th:field="*{name}" required><br>
+
+    <label>Standard:</label><br>
+    <input type="text" th:field="*{standard}" required><br>
+
+    <label>School:</label><br>
+    <input type="text" th:field="*{school}" required><br>
+
+    <button type="submit">Insert</button>
+    <button type="reset">Reset</button>
+
+</form>
+
+<hr>
+
+<h3>Student Records</h3>
+
+<table>
+    <tr>
+        <th>Roll No</th>
+        <th>Name</th>
+        <th>Standard</th>
+        <th>School</th>
+    </tr>
+
+    <tr th:each="s : ${students}">
+        <td th:text="${s.rollNo}"></td>
+        <td th:text="${s.name}"></td>
+        <td th:text="${s.standard}"></td>
+        <td th:text="${s.school}"></td>
+    </tr>
+
+</table>
+
+</body>
+</html>
