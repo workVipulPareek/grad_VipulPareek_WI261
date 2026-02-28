@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+
+  postgres-db:
+    image: postgres:15
+    container_name: postgres-container
+    restart: always
+    environment:
+      POSTGRES_DB: studentdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+
+  student-app:
+    build: .
+    container_name: student-app-container
+    restart: always
+    depends_on:
+      - postgres-db
+    ports:
+      - "8080:8080"
