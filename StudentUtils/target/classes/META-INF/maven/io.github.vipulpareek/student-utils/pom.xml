@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.github.vipulpareek</groupId>
+    <artifactId>student-utils</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>Student Utils Library</name>
+    <description>Simple utility library for student operations</description>
+    <url>https://github.com/vipulpareek/student-utils</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>vipulpareek</id>
+            <name>Vipul Pareek</name>
+            <email>your_email@gmail.com</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/vipulpareek/student-utils.git</connection>
+        <developerConnection>scm:git:ssh://github.com:vipulpareek/student-utils.git</developerConnection>
+        <url>https://github.com/vipulpareek/student-utils</url>
+    </scm>
+
+</project>
